@@ -25,6 +25,10 @@ func main()  {
 	
 	 //广播式消费：消费者3
     go clusterConsumer(wg, Address, topic, "test-consumer-group")
+	
+	 //广播式消费：消费者4
+    go clusterConsumer(wg, Address, topic, "test-consumer-group")
+ 
  
     wg.Wait()
 }
